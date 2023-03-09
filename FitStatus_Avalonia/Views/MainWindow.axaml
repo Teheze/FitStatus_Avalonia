@@ -14,7 +14,75 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush  Stretch="Fill" Source="/Assets/BMI_background.jpg"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Styles>
+    
+        <Grid RowDefinitions="Auto,3*,*,2*" >
+        <!-- Title bar -->
+        <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Height="140" Background="#1F1F1F" Opacity="0.95">
+            <Rectangle Grid.Column="0" Fill="Red" Width="100" Height="100"></Rectangle>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Foreground="#D9D9D9" FontWeight="Black" FontSize="96">BMI</Label>
+            </StackPanel>
+            <Rectangle Grid.Column="2" Fill="Red" Width="100" Height="100"></Rectangle>
+        </Grid>
+        <!-- Input bar -->
+        <Grid ColumnDefinitions="2*, *" Grid.Row="1">
+            <Grid Grid.Column="0">
+                <Label Foreground="#D9D9D9" Content="Weight (kg)" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top"/>
+                <TextBox Background="#333333" HorizontalAlignment="Left" Height="60" MinWidth="200" Margin="200,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    
+            </Grid>
+            <Grid Grid.Column="1">
+                <Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="28" Background="#333333" VerticalAlignment="Center" HorizontalAlignment="Stretch" Foreground="#D9D9D9">Potwierdź</Button>
+            </Grid>
+        </Grid>
+        <!-- Result bar -->
+        <Grid Grid.Row="2" Background="#1F1F1F" Opacity="0.9" Margin="10 0">
+            <Grid>
+                <TextBlock Text="{Binding Bmi}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+        <!-- Bottom bar -->
+        <Grid Grid.Row="3" Margin="70 20 70 20">
+                <Border Opacity="0.8" BorderThickness="1" BorderBrush="Black" CornerRadius="25" Background="#333333" Padding="15" >
+            <Grid>
+                    <StackPanel>
+                        <TextBlock Foreground="#D9D9D9" FontWeight="Bold" FontSize="24" Padding="0 0 0 20">
+                            Czym jest BMI?
+                        </TextBlock>
+                        <TextBlock Foreground="#D9D9D9" TextTrimming="WordEllipsis" Padding="0 0 0 10">
+                            BMI to skrót od "Body Mass Index", czyli wskaźnika masy ciała. Jest to miara stosunku masy ciała do wzrostu, która pozwala ocenić, czy waga osoby jest prawidłowa w kontekście jej wzrostu.
+                        </TextBlock>
+                        <TextBlock Foreground="#D9D9D9" TextWrapping="Wrap" Padding="0 0 0 10">
+                            Według Światowej Organizacji Zdrowia (WHO) kategorie wagowe oparte na BMI są następujące:
+                        </TextBlock>
+                        <TextBlock Foreground="#D9D9D9" TextWrapping="Wrap" Padding="30 0 0 0">
+                            BMI poniżej 18,5 - niedowaga
+                        </TextBlock>
+                        <TextBlock Foreground="#D9D9D9" TextWrapping="Wrap" Padding="30 0 0 0">
+                            BMI między 18,5 a 24,9 - prawidłowa masa ciała
+                        </TextBlock>
+                        <TextBlock Foreground="#D9D9D9" TextWrapping="Wrap" Padding="30 0 0 0">
+                            BMI między 25 a 29,9 - nadwaga
+                        </TextBlock>
+                        <TextBlock Foreground="#D9D9D9" TextWrapping="Wrap" Padding="30 0 0 20">
+                            BMI powyżej 30 - otyłość
+                        </TextBlock>
+                        <TextBlock Foreground="#D9D9D9" TextTrimming="WordEllipsis">
+                            Należy jednak pamiętać, że BMI nie uwzględnia różnic między tkanką tłuszczową a mięśniową, dlatego w niektórych przypadkach (np. u sportowców) wskaźnik ten może nie być najlepszym narzędziem do oceny masy ciała.
+                        </TextBlock>
+                    </StackPanel>
+            </Grid>
+                </Border>
+        </Grid>
+    </Grid>
 
 </Window>

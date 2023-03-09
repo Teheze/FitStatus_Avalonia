@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="FitStatus_Avalonia/App.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />
         <entry key="FitStatus_Avalonia/Views/MainWindow.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />
       </map>
     </option>
