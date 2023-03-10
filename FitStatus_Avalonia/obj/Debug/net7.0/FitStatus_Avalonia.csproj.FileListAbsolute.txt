@@ -131,3 +131,9 @@ E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\obj\Debug\net7.0\refint\F
 E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\obj\Debug\net7.0\FitStatus_Avalonia.pdb
 E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\obj\Debug\net7.0\FitStatus_Avalonia.genruntimeconfig.cache
 E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\obj\Debug\net7.0\ref\FitStatus_Avalonia.dll
+E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\bin\Debug\net7.0\Avalonia.Svg.dll
+E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\bin\Debug\net7.0\ExCSS.dll
+E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\bin\Debug\net7.0\Fizzler.dll
+E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\bin\Debug\net7.0\ShimSkiaSharp.dll
+E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\bin\Debug\net7.0\Svg.Custom.dll
+E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\bin\Debug\net7.0\Svg.Model.dll

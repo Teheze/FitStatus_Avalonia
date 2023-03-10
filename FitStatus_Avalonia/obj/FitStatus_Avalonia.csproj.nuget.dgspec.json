@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[0.10.18, )"
             },
+            "Avalonia.Svg": {
+              "target": "Package",
+              "version": "[0.10.18, )"
+            },
             "XamlNameReferenceGenerator": {
               "target": "Package",
               "version": "[1.6.1, )"

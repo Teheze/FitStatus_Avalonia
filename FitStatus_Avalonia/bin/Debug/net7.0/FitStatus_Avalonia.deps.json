@@ -12,6 +12,7 @@
           "Avalonia.Desktop": "0.10.18",
           "Avalonia.Diagnostics": "0.10.18",
           "Avalonia.ReactiveUI": "0.10.18",
+          "Avalonia.Svg": "0.10.18",
           "XamlNameReferenceGenerator": "1.6.1"
         },
         "runtime": {
@@ -23,7 +24,7 @@
           "Avalonia.Remote.Protocol": "0.10.18",
           "JetBrains.Annotations": "10.3.0",
           "System.ComponentModel.Annotations": "4.5.0",
-          "System.Memory": "4.5.3",
+          "System.Memory": "4.5.4",
           "System.Reactive": "5.0.0",
           "System.Runtime.CompilerServices.Unsafe": "4.6.0",
           "System.ValueTuple": "4.5.0"
@@ -233,6 +234,18 @@
           }
         }
       },
+      "Avalonia.Svg/0.10.18": {
+        "dependencies": {
+          "Avalonia": "0.10.18",
+          "Svg.Model": "0.5.18"
+        },
+        "runtime": {
+          "lib/net6.0/Avalonia.Svg.dll": {
+            "assemblyVersion": "0.10.18.0",
+            "fileVersion": "0.10.18.0"
+          }
+        }
+      },
       "Avalonia.Win32/0.10.18": {
         "dependencies": {
           "Avalonia": "0.10.18",
@@ -268,6 +281,22 @@
           "lib/net5.0/DynamicData.dll": {
             "assemblyVersion": "7.1.0.0",
             "fileVersion": "7.1.1.11487"
+          }
+        }
+      },
+      "ExCSS/4.1.4": {
+        "runtime": {
+          "lib/net6.0/ExCSS.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.1.4.0"
+          }
+        }
+      },
+      "Fizzler/1.2.1": {
+        "runtime": {
+          "lib/netstandard2.0/Fizzler.dll": {
+            "assemblyVersion": "1.2.1.0",
+            "fileVersion": "1.2.1.0"
           }
         }
       },
@@ -355,7 +384,7 @@
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "2.9.6",
           "System.Collections.Immutable": "1.5.0",
-          "System.Memory": "4.5.3",
+          "System.Memory": "4.5.4",
           "System.Reflection.Metadata": "1.6.0",
           "System.Runtime.CompilerServices.Unsafe": "4.6.0",
           "System.Text.Encoding.CodePages": "4.5.1",
@@ -623,6 +652,14 @@
           }
         }
       },
+      "ShimSkiaSharp/0.5.18": {
+        "runtime": {
+          "lib/net6.0/ShimSkiaSharp.dll": {
+            "assemblyVersion": "0.5.18.0",
+            "fileVersion": "0.5.18.0"
+          }
+        }
+      },
       "SkiaSharp/2.88.1-preview.108": {
         "dependencies": {
           "SkiaSharp.NativeAssets.Win32": "2.88.1-preview.108",
@@ -696,6 +733,33 @@
           "lib/net5.0/Splat.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.1.9728"
+          }
+        }
+      },
+      "Svg.Custom/0.5.18": {
+        "dependencies": {
+          "ExCSS": "4.1.4",
+          "Fizzler": "1.2.1",
+          "System.Memory": "4.5.4",
+          "System.ObjectModel": "4.3.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/net6.0/Svg.Custom.dll": {
+            "assemblyVersion": "0.5.18.0",
+            "fileVersion": "0.5.18.0"
+          }
+        }
+      },
+      "Svg.Model/0.5.18": {
+        "dependencies": {
+          "ShimSkiaSharp": "0.5.18",
+          "Svg.Custom": "0.5.18"
+        },
+        "runtime": {
+          "lib/net6.0/Svg.Model.dll": {
+            "assemblyVersion": "0.5.18.0",
+            "fileVersion": "0.5.18.0"
           }
         }
       },
@@ -805,7 +869,7 @@
           "System.Threading": "4.3.0"
         }
       },
-      "System.Memory/4.5.3": {},
+      "System.Memory/4.5.4": {},
       "System.Numerics.Vectors/4.5.0": {},
       "System.ObjectModel/4.3.0": {
         "dependencies": {
@@ -1037,6 +1101,13 @@
       "path": "avalonia.skia/0.10.18",
       "hashPath": "avalonia.skia.0.10.18.nupkg.sha512"
     },
+    "Avalonia.Svg/0.10.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5WqOU2qFO41bOq2xLNa5yRhYYDAzZ+zNSO3Kd6yFmBKmDdmmZ9bB5nv4jXO6co6Ew66yv20qA36Myzt+BDlDQQ==",
+      "path": "avalonia.svg/0.10.18",
+      "hashPath": "avalonia.svg.0.10.18.nupkg.sha512"
+    },
     "Avalonia.Win32/0.10.18": {
       "type": "package",
       "serviceable": true,
@@ -1057,6 +1128,20 @@
       "sha512": "sha512-Pc6J5bFnSxEa64PV2V67FMcLlDdpv6m+zTBKSnRN3aLon/WtWWy8kuDpHFbJlgXHtqc6Nxloj9ItuvDlvKC/8w==",
       "path": "dynamicdata/7.1.1",
       "hashPath": "dynamicdata.7.1.1.nupkg.sha512"
+    },
+    "ExCSS/4.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6eMFdIazPCVfr9Gios0nCUYq3/02SewnDGvS+aCi/RWaAtoETz2fNT+H//+k0vjoDJBHXkWdVG8EkxUydxtyxA==",
+      "path": "excss/4.1.4",
+      "hashPath": "excss.4.1.4.nupkg.sha512"
+    },
+    "Fizzler/1.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nSudK8LeKSu7T/N/6NVZNjUniMYagfzVo8yT2XwZ9BOVbWYQH3EQ8oviuztJ7AfO8PlRDsYIWboZuzIg94hhzQ==",
+      "path": "fizzler/1.2.1",
+      "hashPath": "fizzler.1.2.1.nupkg.sha512"
     },
     "HarfBuzzSharp/2.8.2.1-preview.108": {
       "type": "package",
@@ -1170,6 +1255,13 @@
       "path": "reactiveui/13.2.10",
       "hashPath": "reactiveui.13.2.10.nupkg.sha512"
     },
+    "ShimSkiaSharp/0.5.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FbpUe65+jkHHACyUm1Pi7m1lX1fQ0yyo3E0pyQF7ITAGnh/z5ZKRl2e56SHNZxdqpwFVt/MkJekJ4rScRYvXJg==",
+      "path": "shimskiasharp/0.5.18",
+      "hashPath": "shimskiasharp.0.5.18.nupkg.sha512"
+    },
     "SkiaSharp/2.88.1-preview.108": {
       "type": "package",
       "serviceable": true,
@@ -1211,6 +1303,20 @@
       "sha512": "sha512-N8BMGVuUBnVLAHSVbna/st8XiLd8ulF3BfkKUSGCPqYpDCis3ELvM+aFaZQLBUIBEcweCYVLq3HFEBqHkCKFyA==",
       "path": "splat/10.0.1",
       "hashPath": "splat.10.0.1.nupkg.sha512"
+    },
+    "Svg.Custom/0.5.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NJOTwyau7cXHmS4erwaoscvTzi34gd3BIXF8eYZuRjH1Bx2F0FVww7W2/9mM98ZFjatYtk2RuSiaaEM/Mv53sw==",
+      "path": "svg.custom/0.5.18",
+      "hashPath": "svg.custom.0.5.18.nupkg.sha512"
+    },
+    "Svg.Model/0.5.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zBuA3t3onN1dppNEsphc1PZfdwBaHizwtU7CFYYl3At5jufjWGACwuwG5//2ny3RbZzYoR8zqZszxkiz3Z/2lQ==",
+      "path": "svg.model/0.5.18",
+      "hashPath": "svg.model.0.5.18.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -1282,12 +1388,12 @@
       "path": "system.linq.expressions/4.3.0",
       "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
     },
-    "System.Memory/4.5.3": {
+    "System.Memory/4.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
-      "path": "system.memory/4.5.3",
-      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",

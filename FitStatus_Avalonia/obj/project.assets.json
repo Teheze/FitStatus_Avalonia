@@ -297,6 +297,19 @@
           }
         }
       },
+      "Avalonia.Svg/0.10.18": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "0.10.18",
+          "Svg.Model": "0.5.18"
+        },
+        "compile": {
+          "lib/net6.0/Avalonia.Svg.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Avalonia.Svg.dll": {}
+        }
+      },
       "Avalonia.Win32/0.10.18": {
         "type": "package",
         "dependencies": {
@@ -347,6 +360,28 @@
         "runtime": {
           "lib/net5.0/DynamicData.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "ExCSS/4.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ExCSS.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/ExCSS.dll": {}
+        }
+      },
+      "Fizzler/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Fizzler.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Fizzler.dll": {
+            "related": ".pdb"
           }
         }
       },
@@ -791,6 +826,15 @@
           }
         }
       },
+      "ShimSkiaSharp/0.5.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ShimSkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/ShimSkiaSharp.dll": {}
+        }
+      },
       "SkiaSharp/2.88.1-preview.108": {
         "type": "package",
         "dependencies": {
@@ -900,6 +944,35 @@
           "lib/net5.0/Splat.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Svg.Custom/0.5.18": {
+        "type": "package",
+        "dependencies": {
+          "ExCSS": "4.1.4",
+          "Fizzler": "1.2.1",
+          "System.Memory": "4.5.4",
+          "System.ObjectModel": "4.3.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net6.0/Svg.Custom.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Svg.Custom.dll": {}
+        }
+      },
+      "Svg.Model/0.5.18": {
+        "type": "package",
+        "dependencies": {
+          "ShimSkiaSharp": "0.5.18",
+          "Svg.Custom": "0.5.18"
+        },
+        "compile": {
+          "lib/net6.0/Svg.Model.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Svg.Model.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -1076,7 +1149,7 @@
           "lib/netstandard1.6/System.Linq.Expressions.dll": {}
         }
       },
-      "System.Memory/4.5.3": {
+      "System.Memory/4.5.4": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -1721,6 +1794,19 @@
         "lib/netstandard2.0/Avalonia.Skia.xml"
       ]
     },
+    "Avalonia.Svg/0.10.18": {
+      "sha512": "5WqOU2qFO41bOq2xLNa5yRhYYDAzZ+zNSO3Kd6yFmBKmDdmmZ9bB5nv4jXO6co6Ew66yv20qA36Myzt+BDlDQQ==",
+      "type": "package",
+      "path": "avalonia.svg/0.10.18",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "avalonia.svg.0.10.18.nupkg.sha512",
+        "avalonia.svg.nuspec",
+        "lib/net6.0/Avalonia.Svg.dll",
+        "lib/netstandard2.0/Avalonia.Svg.dll"
+      ]
+    },
     "Avalonia.Win32/0.10.18": {
       "sha512": "NcfRy+gVQebKEOU9XNwbjJDrgV08sJMSQmFnJRdfKf0uniU0hzgfTrDi/5XEtaxJvfzVpd8xQWYh2E6ByJ28cQ==",
       "type": "package",
@@ -1768,6 +1854,38 @@
         "lib/uap10.0.16299/DynamicData.dll",
         "lib/uap10.0.16299/DynamicData.pri",
         "lib/uap10.0.16299/DynamicData.xml"
+      ]
+    },
+    "ExCSS/4.1.4": {
+      "sha512": "6eMFdIazPCVfr9Gios0nCUYq3/02SewnDGvS+aCi/RWaAtoETz2fNT+H//+k0vjoDJBHXkWdVG8EkxUydxtyxA==",
+      "type": "package",
+      "path": "excss/4.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "excss.4.1.4.nupkg.sha512",
+        "excss.nuspec",
+        "lib/net452/ExCSS.dll",
+        "lib/net5.0/ExCSS.dll",
+        "lib/net6.0/ExCSS.dll",
+        "lib/netcoreapp3.1/ExCSS.dll",
+        "lib/netstandard2.0/ExCSS.dll"
+      ]
+    },
+    "Fizzler/1.2.1": {
+      "sha512": "nSudK8LeKSu7T/N/6NVZNjUniMYagfzVo8yT2XwZ9BOVbWYQH3EQ8oviuztJ7AfO8PlRDsYIWboZuzIg94hhzQ==",
+      "type": "package",
+      "path": "fizzler/1.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING.txt",
+        "fizzler.1.2.1.nupkg.sha512",
+        "fizzler.nuspec",
+        "lib/netstandard1.0/Fizzler.dll",
+        "lib/netstandard1.0/Fizzler.pdb",
+        "lib/netstandard2.0/Fizzler.dll",
+        "lib/netstandard2.0/Fizzler.pdb"
       ]
     },
     "HarfBuzzSharp/2.8.2.1-preview.108": {
@@ -2317,6 +2435,19 @@
         "reactiveui.nuspec"
       ]
     },
+    "ShimSkiaSharp/0.5.18": {
+      "sha512": "FbpUe65+jkHHACyUm1Pi7m1lX1fQ0yyo3E0pyQF7ITAGnh/z5ZKRl2e56SHNZxdqpwFVt/MkJekJ4rScRYvXJg==",
+      "type": "package",
+      "path": "shimskiasharp/0.5.18",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/ShimSkiaSharp.dll",
+        "lib/netstandard2.0/ShimSkiaSharp.dll",
+        "shimskiasharp.0.5.18.nupkg.sha512",
+        "shimskiasharp.nuspec"
+      ]
+    },
     "SkiaSharp/2.88.1-preview.108": {
       "sha512": "Zfs4qdQuvLsdSdBa42CnD8Dlcnkr46GaaFEwouzrjOLse8DmKkf/zBaCFCUkNIjGDZFkjFGe/ai5qHYkMcXIsg==",
       "type": "package",
@@ -2506,6 +2637,32 @@
         "lib/netstandard2.0/Splat.xml",
         "splat.10.0.1.nupkg.sha512",
         "splat.nuspec"
+      ]
+    },
+    "Svg.Custom/0.5.18": {
+      "sha512": "NJOTwyau7cXHmS4erwaoscvTzi34gd3BIXF8eYZuRjH1Bx2F0FVww7W2/9mM98ZFjatYtk2RuSiaaEM/Mv53sw==",
+      "type": "package",
+      "path": "svg.custom/0.5.18",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Svg.Custom.dll",
+        "lib/netstandard2.0/Svg.Custom.dll",
+        "svg.custom.0.5.18.nupkg.sha512",
+        "svg.custom.nuspec"
+      ]
+    },
+    "Svg.Model/0.5.18": {
+      "sha512": "zBuA3t3onN1dppNEsphc1PZfdwBaHizwtU7CFYYl3At5jufjWGACwuwG5//2ny3RbZzYoR8zqZszxkiz3Z/2lQ==",
+      "type": "package",
+      "path": "svg.model/0.5.18",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Svg.Model.dll",
+        "lib/netstandard2.0/Svg.Model.dll",
+        "svg.model.0.5.18.nupkg.sha512",
+        "svg.model.nuspec"
       ]
     },
     "System.Collections/4.3.0": {
@@ -3165,22 +3322,24 @@
         "system.linq.expressions.nuspec"
       ]
     },
-    "System.Memory/4.5.3": {
-      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
       "type": "package",
-      "path": "system.memory/4.5.3",
+      "path": "system.memory/4.5.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.1/System.Memory.dll",
         "lib/netstandard1.1/System.Memory.xml",
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.4.5.4.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -4614,6 +4773,7 @@
       "Avalonia.Desktop >= 0.10.18",
       "Avalonia.Diagnostics >= 0.10.18",
       "Avalonia.ReactiveUI >= 0.10.18",
+      "Avalonia.Svg >= 0.10.18",
       "XamlNameReferenceGenerator >= 1.6.1"
     ]
   },
@@ -4675,6 +4835,10 @@
             "version": "[0.10.18, )"
           },
           "Avalonia.ReactiveUI": {
+            "target": "Package",
+            "version": "[0.10.18, )"
+          },
+          "Avalonia.Svg": {
             "target": "Package",
             "version": "[0.10.18, )"
           },
