@@ -17,5 +17,14 @@ build_property.ProjectDir = E:\programowanie\FitStatus_Avalonia\FitStatus_Avalon
 [E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/Bmi_view.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/Bmr_view.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/Training_view.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
