@@ -15,9 +15,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </UserControl.Styles>
+
     <!-- Text styling -->
-    <UserControl.Styles>
         <Style Selector="TextBlock.h1">
             <Setter Property="FontSize" Value="94"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -35,14 +34,13 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Foreground" Value="#D9D9D9"></Setter>
         </Style>
-    </UserControl.Styles>
-    <!-- Button styling -->
-    <UserControl.Styles>
+        
+        <!-- Button styling -->
         <Style Selector="Button.main">
             <Setter Property="FontSize" Value="24"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="Background" Value="#333333"/>
             <Setter Property="Foreground" Value="#D9D9D9"/>
@@ -56,7 +54,7 @@
             <Setter Property="TextBlock.Foreground" Value="#D9D9D9"/>
             <Setter Property="Background" Value="#989AD9"/>
             <Setter Property="Padding" Value="0 0"/>
-            <Setter Property="BorderThickness" Value="4"/>
+            <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="BorderBrush" Value="black"/>
         </Style>
     
@@ -97,12 +95,12 @@
         <Grid ColumnDefinitions="2*, *" Grid.Row="0">
             <Grid Grid.Column="0">
                 <Label Classes="h3" Content="Waga [kg]" HorizontalAlignment="Left" Margin="75,109,0,0" VerticalAlignment="Top"/>
-                <TextBox Margin="200,100,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="WeightTextBox" Margin="200,100,0,0" VerticalAlignment="Top"/>
                 <Label Classes="h3" Content="Wzrost [cm]" HorizontalAlignment="Left" Margin="75,0,0,112" VerticalAlignment="Bottom"/>
-                <TextBox Margin="200,0,0,100" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="HeightTextBox" Margin="200,0,0,100" VerticalAlignment="Bottom"/>
             </Grid>
             <Grid Grid.Column="1">
-                <Button Classes="main" Margin="0  0 75 0">Potwierdź</Button>
+                <Button Click="OnConfirmButtonBmiClicked" Classes="main" Margin="0,0,75,100">Potwierdź</Button>
             </Grid>
         </Grid>
         <!-- Result bar -->
@@ -112,7 +110,7 @@
                 <Border.Background>
                     <SolidColorBrush Color="#1F1F1F" Opacity="0.6"/>
                 </Border.Background>
-                <TextBlock Foreground="#D9D9D9" Text="{Binding Bmi}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="30"/>
+                <TextBlock x:Name="BmiResultTextBlock" Foreground="#D9D9D9" Text="Oblicz swoje BMI korzystając z powyższego kalkulatora." HorizontalAlignment="Center" VerticalAlignment="Center" Padding="30"/>
             </Border>
             <Grid Grid.Column="2"></Grid>
         </Grid>

@@ -1,6 +1,14 @@
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Data;
 using Avalonia.Layout;
+using Avalonia.Data.Core;
+using Avalonia.Markup.Xaml;
+using Avalonia.Reactive;
+using FitStatus_Avalonia.ViewModels;
+using ReactiveUI;
+
 
 namespace FitStatus_Avalonia.Views
 {
@@ -23,14 +31,18 @@ namespace FitStatus_Avalonia.Views
             {
                 case "BMI":
                     ContentControl.Content = new Bmi_view();
+                    HeaderText.Text = "BMI";
                     break;
                 case "BMR":
                     ContentControl.Content = new Bmr_view();
+                    HeaderText.Text = "BMR";
                     break;
                 case "Trening":
                     ContentControl.Content = new Training_view();
+                    HeaderText.Text = "TRENING";
                     break;
             }
+
 
             MySplitView.IsPaneOpen = false;
         }

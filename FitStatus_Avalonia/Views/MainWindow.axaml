@@ -63,24 +63,43 @@
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="BorderBrush" Value="black"/>
         </Style>
-    
         <Style Selector="Button.main:pointerover /template/ContentPresenter">
             <Setter Property="TextBlock.Foreground" Value="#D9D9D9"/>
             <Setter Property="Background" Value="#989AD9"/>
             <Setter Property="Padding" Value="0 0"/>
-            <Setter Property="BorderThickness" Value="4"/>
+            <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="BorderBrush" Value="black"/>
         </Style>
     
         <Style Selector="Button.svg">
             <Setter Property="Background" Value="Transparent"/>
         </Style>
-    
         <Style Selector="Button.svg:pointerover /template/ContentPresenter">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="RenderTransform" Value="scale(1.1)"/>
             <Setter Property="Opacity" Value="0.9"/>
         </Style>
+        
+        <Style Selector="Button.menu">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0 0 0 1"/>
+            <Setter Property="MaxWidth" Value="200"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="BorderBrush" Value="black"/>
+            <Setter Property="Padding" Value="10 30"/>
+            <Setter Property="Margin" Value="20 20"/>
+            <Setter Property="Foreground" Value="#D9D9D9"/>
+        </Style>
+        <Style Selector="Button.menu:pointerover /template/ContentPresenter">
+            <Setter Property="Background" Value="#11989AD9"/>
+            <Setter Property="RenderTransform" Value="scale(1.7)"/>
+            <Setter Property="TextBlock.Foreground" Value="#D9D9D9"/>
+        </Style>
+        
         <Style Selector="TextBox">
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="Height" Value="50"/>
@@ -111,7 +130,7 @@
                 <Image Source="{SvgImage /Assets/Images/menu.svg}"/>
             </Button>
             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock Classes="h1">BMI</TextBlock>
+                <TextBlock  x:Name="HeaderText" Classes="h1" Text="STRONA GŁÓWNA"/>
             </StackPanel>
             <Button Classes="svg" Grid.Column="2" Width="110" Height="110" Margin="0 0 10 0">
                 <Image Source="{SvgImage /Assets/Images/account.svg}"/>
@@ -121,9 +140,9 @@
         <SplitView x:Name="MySplitView" Grid.Row="1" DisplayMode="Overlay" IsPaneOpen="False">
             <SplitView.Pane>
                 <StackPanel Background="#1F1F1F">
-                    <Button Content="BMI" Foreground="White" Click="MenuShowView" />
-                    <Button Content="BMR" Foreground="White" Click="MenuShowView" />
-                    <Button Content="Trening" Foreground="White" Click="MenuShowView" />
+                    <Button Classes="menu" Content="BMI" Foreground="White" Click="MenuShowView" />
+                    <Button Classes="menu" Content="BMR" Foreground="White" Click="MenuShowView" />
+                    <Button Classes="menu" Content="Trening" Foreground="White" Click="MenuShowView" />
                 </StackPanel>
             </SplitView.Pane>
             <SplitView.Content>
