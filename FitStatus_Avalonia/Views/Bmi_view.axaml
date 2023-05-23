@@ -6,17 +6,8 @@
              d:DesignHeight="450" d:DesignWidth="800"
              x:Class="FitStatus_Avalonia.Views.Bmi_view">
     
-    <!-- Background image -->
     <UserControl.Styles>
-        <Style Selector="Window">
-            <Setter Property="Background">
-                <Setter.Value>
-                    <ImageBrush  Stretch="Fill" Source="/Assets/Images/BMI_background.jpg"/>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-    <!-- Text styling -->
+        <!-- Text styling -->
         <Style Selector="TextBlock.h1">
             <Setter Property="FontSize" Value="94"/>
             <Setter Property="FontWeight" Value="Bold"/>

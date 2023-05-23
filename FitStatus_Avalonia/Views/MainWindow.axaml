@@ -17,11 +17,16 @@
     </Design.DataContext>
     
     <!-- Background image -->
+    <Window.Resources>
+        <ImageBrush x:Key="BmiBrush" Stretch="UniformToFill" Source="/Assets/Images/BMI_background.jpg"/>
+        <!-- <ImageBrush x:Key="BmrBrush" Stretch="UniformToFill" Source="/Assets/Images/BMI_background.jpg"/> -->
+        <!-- <ImageBrush x:Key="TrainingBrush" Stretch="UniformToFill" Source="/Assets/Images/BMI_background.jpg"/> -->
+    </Window.Resources>
     <Window.Styles>
         <Style Selector="Window">
             <Setter Property="Background">
                 <Setter.Value>
-                    <ImageBrush  Stretch="Fill" Source="/Assets/Images/BMI_background.jpg"/>
+                    <ImageBrush Stretch="UniformToFill" Source="/Assets/Images/BMR_background.jpg"/>
                 </Setter.Value>
             </Setter>
         </Style>
@@ -125,7 +130,7 @@
     
     <Grid RowDefinitions="Auto, *" >
         <!-- Title bar -->
-        <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Height="140" Background="#1F1F1F" Opacity="0.95">
+        <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Height="140" Background="#1F1F1F" Opacity="0.9">
             <Button Classes="svg" Grid.Column="0" Width="100" Height="100" Margin="20 0 0 0" Click="ToggleSplitView">
                 <Image Source="{SvgImage /Assets/Images/menu.svg}"/>
             </Button>

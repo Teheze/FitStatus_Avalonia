@@ -5,6 +5,7 @@ using Avalonia.Data;
 using Avalonia.Layout;
 using Avalonia.Data.Core;
 using Avalonia.Markup.Xaml;
+using Avalonia.Media;
 using Avalonia.Reactive;
 using FitStatus_Avalonia.ViewModels;
 using ReactiveUI;
@@ -32,6 +33,7 @@ namespace FitStatus_Avalonia.Views
                 case "BMI":
                     ContentControl.Content = new Bmi_view();
                     HeaderText.Text = "BMI";
+                    this.Background = (Brush)this.Resources["BmiBrush"];
                     break;
                 case "BMR":
                     ContentControl.Content = new Bmr_view();

@@ -4779,23 +4779,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Teheze\\.nuget\\packages\\": {},
+    "C:\\Users\\Tehez\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\programowanie\\FitStatus_Avalonia\\FitStatus_Avalonia\\FitStatus_Avalonia.csproj",
+      "projectUniqueName": "C:\\Users\\Tehez\\RiderProjects\\FitStatus_Avalonia\\FitStatus_Avalonia\\FitStatus_Avalonia.csproj",
       "projectName": "FitStatus_Avalonia",
-      "projectPath": "E:\\programowanie\\FitStatus_Avalonia\\FitStatus_Avalonia\\FitStatus_Avalonia.csproj",
-      "packagesPath": "C:\\Users\\Teheze\\.nuget\\packages\\",
-      "outputPath": "E:\\programowanie\\FitStatus_Avalonia\\FitStatus_Avalonia\\obj\\",
+      "projectPath": "C:\\Users\\Tehez\\RiderProjects\\FitStatus_Avalonia\\FitStatus_Avalonia\\FitStatus_Avalonia.csproj",
+      "packagesPath": "C:\\Users\\Tehez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tehez\\RiderProjects\\FitStatus_Avalonia\\FitStatus_Avalonia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Teheze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tehez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4804,7 +4804,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4868,7 +4867,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
