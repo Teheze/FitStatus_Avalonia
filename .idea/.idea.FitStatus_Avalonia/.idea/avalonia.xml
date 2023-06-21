@@ -9,6 +9,7 @@
         <entry key="FitStatus_Avalonia/Views/Bmi_view.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />
         <entry key="FitStatus_Avalonia/Views/Bmr_view.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />
         <entry key="FitStatus_Avalonia/Views/MainWindow.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />
+        <entry key="FitStatus_Avalonia/Views/Styles.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />
         <entry key="FitStatus_Avalonia/Views/Training.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />
         <entry key="FitStatus_Avalonia/Views/Training_view.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />
         <entry key="FitStatus_Avalonia/Window1.axaml" value="FitStatus_Avalonia/FitStatus_Avalonia.csproj" />

@@ -12,19 +12,22 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FitStatus_Avalonia
-build_property.ProjectDir = C:\Users\Tehez\RiderProjects\FitStatus_Avalonia\FitStatus_Avalonia\
+build_property.ProjectDir = E:\programowanie\FitStatus_Avalonia\FitStatus_Avalonia\
 
-[C:/Users/Tehez/RiderProjects/FitStatus_Avalonia/FitStatus_Avalonia/App.axaml]
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Tehez/RiderProjects/FitStatus_Avalonia/FitStatus_Avalonia/Views/Bmi_view.axaml]
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/Bmi_view.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Tehez/RiderProjects/FitStatus_Avalonia/FitStatus_Avalonia/Views/Bmr_view.axaml]
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/Bmr_view.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Tehez/RiderProjects/FitStatus_Avalonia/FitStatus_Avalonia/Views/MainWindow.axaml]
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Tehez/RiderProjects/FitStatus_Avalonia/FitStatus_Avalonia/Views/Training_view.axaml]
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/Styles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[E:/programowanie/FitStatus_Avalonia/FitStatus_Avalonia/Views/Training_view.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

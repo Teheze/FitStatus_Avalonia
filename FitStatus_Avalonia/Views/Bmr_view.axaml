@@ -5,6 +5,11 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
              x:Class="FitStatus_Avalonia.Views.Bmr_view">
+    
+    <UserControl.Styles>
+        <StyleInclude Source="/Views/Styles.axaml" />
+    </UserControl.Styles>
+    
     <Grid>
         <StackPanel Orientation="Vertical"
                     HorizontalAlignment="Center"

@@ -1,0 +1,96 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!-- Text styling -->
+    <Style Selector="TextBlock.h1">
+        <Setter Property="FontSize" Value="94" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <Style Selector="TextBlock.h2">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#D9D9D9"/>
+    </Style>
+
+    <Style Selector="Label.h3">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#D9D9D9"/>
+    </Style>
+
+    <!-- Button styling -->
+    <Style Selector="Button.main">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Background" Value="#333333" />
+        <Setter Property="Foreground" Value="#D9D9D9" />
+        <Setter Property="ClickMode" Value="Press" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="black" />
+    </Style>
+    <Style Selector="Button.main:pointerover /template/ContentPresenter">
+        <Setter Property="TextBlock.Foreground" Value="#D9D9D9" />
+        <Setter Property="Background" Value="#989AD9" />
+        <Setter Property="Padding" Value="0 0" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="black" />
+    </Style>
+
+    <Style Selector="Button.svg">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style Selector="Button.svg:pointerover /template/ContentPresenter">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="RenderTransform" Value="scale(1.1)" />
+        <Setter Property="Opacity" Value="0.9" />
+    </Style>
+
+    <Style Selector="Button.menu">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0 0 0 1" />
+        <Setter Property="MaxWidth" Value="200" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="BorderBrush" Value="black" />
+        <Setter Property="Padding" Value="10 30" />
+        <Setter Property="Margin" Value="20 20" />
+        <Setter Property="Foreground" Value="#D9D9D9" />
+    </Style>
+    <Style Selector="Button.menu:pointerover /template/ContentPresenter">
+        <Setter Property="Background" Value="#11989AD9" />
+        <Setter Property="RenderTransform" Value="scale(1.7)" />
+        <Setter Property="TextBlock.Foreground" Value="#D9D9D9" />
+    </Style>
+
+    <!-- TextBox Styling -->
+    <Style Selector="TextBox">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Background" Value="#333333" />
+        <Setter Property="Foreground" Value="#D9D9D9" />
+        <Setter Property="MinWidth" Value="200" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="black" />
+    </Style>
+
+    <Style Selector="TextBox:focused">
+        <Setter Property="TextBlock.Foreground" Value="#D9D9D9" />
+        <Setter Property="Background" Value="#989AD9" />
+        <Setter Property="Padding" Value="0 0" />
+    </Style>
+</Styles>

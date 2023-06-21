@@ -26,18 +26,19 @@ namespace FitStatus_Avalonia.Views
         private void MenuShowView(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            string content = button.Content.ToString();
+            string? content = button.Content.ToString();
 
             switch (content)
             {
                 case "BMI":
                     ContentControl.Content = new Bmi_view();
                     HeaderText.Text = "BMI";
-                    this.Background = (Brush)this.Resources["BmiBrush"];
+                    Background = (Brush)Resources["BmiBrush"]!;
                     break;
                 case "BMR":
                     ContentControl.Content = new Bmr_view();
                     HeaderText.Text = "BMR";
+                    Background = (Brush)Resources["BmrBrush"]!;
                     break;
                 case "Trening":
                     ContentControl.Content = new Training_view();
