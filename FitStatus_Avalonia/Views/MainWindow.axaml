@@ -14,7 +14,8 @@
     <Window.Resources>
         <ImageBrush x:Key="BmiBrush" Stretch="UniformToFill" Source="/Assets/Images/BMI_background.jpg"/>
         <ImageBrush x:Key="BmrBrush" Stretch="UniformToFill" Source="/Assets/Images/BMR_background.jpg"/>
-        <!-- <ImageBrush x:Key="TrainingBrush" Stretch="UniformToFill" Source="/Assets/Images/BMI_background.jpg"/> -->
+        <ImageBrush x:Key="TrainingBrush" Stretch="UniformToFill" Source="/Assets/Images/BMI_background.jpg"/>
+        <ImageBrush x:Key="MainWindowBrush" Stretch="UniformToFill" Source="/Assets/Images/MainWindow_background.jpg"/>
     </Window.Resources>
     
     
@@ -39,7 +40,7 @@
             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock  x:Name="HeaderText" Classes="h1" Text="STRONA GŁÓWNA"/>
             </StackPanel>
-            <Button Classes="svg" Grid.Column="2" Width="110" Height="110" Margin="0 0 10 0">
+            <Button Classes="svg" Grid.Column="2" Width="110" Height="110" Margin="0 0 10 0" Click="MainViewSvg">
                 <Image Source="{SvgImage /Assets/Images/account.svg}"/>
             </Button>
         </Grid>

@@ -2,9 +2,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             x:Class="FitStatus_Avalonia.Views.Training_view"
+             xmlns:viewModels="clr-namespace:FitStatus_Avalonia.ViewModels"
+             x:Class="FitStatus_Avalonia.Views.TrainingView"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Red">
+    
+    <UserControl.DataContext>
+        <viewModels:TrainingViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Treningi -->
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="Training Name:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="TrainingName" Text="{Binding TrainingName}" Width="150" Margin="5"/>
+            <Button Command="{Binding AddTrainingCommand}" Content="Add Training" Margin="5"/>
+            <Button Command="{Binding RemoveTrainingCommand}" Content="Remove Training" Margin="5"/>
+        </StackPanel>
+        
+        <ListBox x:Name="TrainingsListBox" Grid.Column="0" Grid.Row="1" Items="{Binding Trainings}" SelectedItem="{Binding SelectedTraining}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" Margin="5"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Ćwiczenia -->
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="Exercise Name:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="ExerciseName" Text="{Binding ExerciseName}" Width="150" Margin="5"/>
+            <TextBlock Text="Repetitions:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="Repetitions" Text="{Binding Repetitions}" Width="50" Margin="5"/>
+            <TextBlock Text="Sets:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="Sets" Text="{Binding Sets}" Width="50" Margin="5"/>
+            <Button Command="{Binding AddExerciseCommand}" Content="Add Exercise" Margin="5"/>
+            <Button Command="{Binding RemoveExerciseCommand}" Content="Remove Exercise" Margin="5"/>
+        </StackPanel>
+        
+        <ListBox x:Name="ExercisesListBox" Grid.Column="1" Grid.Row="1" Items="{Binding Exercises}" SelectedItem="{Binding SelectedExercise}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" Margin="5"/>
+                        <TextBlock Text="Repetitions: " Margin="5"/>
+                        <TextBlock Text="{Binding Repetitions}" Margin="5"/>
+                        <TextBlock Text="Sets: " Margin="5"/>
+                        <TextBlock Text="{Binding Sets}" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Przycisk do aktualizacji ćwiczenia -->
+        <Button Grid.Column="1" Grid.Row="2" Command="{Binding UpdateExerciseCommand}" Content="Update Exercise"/>
+        
     </Grid>
 </UserControl>

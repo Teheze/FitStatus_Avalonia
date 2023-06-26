@@ -5,7 +5,7 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
              xmlns:styling="https://github.com/avaloniaui"
-             x:Class="FitStatus_Avalonia.Views.Bmr_view">
+             x:Class="FitStatus_Avalonia.Views.BmrView">
 
 
     <UserControl.Styles>

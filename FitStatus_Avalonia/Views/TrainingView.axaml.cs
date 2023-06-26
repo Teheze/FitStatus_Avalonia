@@ -1,18 +1,21 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using FitStatus_Avalonia.ViewModels;
 
-namespace FitStatus_Avalonia.Views;
-
-public partial class Training_view : UserControl
+namespace FitStatus_Avalonia.Views
 {
-    public Training_view()
+    public partial class TrainingView : UserControl
     {
-        InitializeComponent();
-    }
+        public TrainingView()
+        {
+            InitializeComponent();
+            DataContext = new TrainingViewModel();
+        }
 
-    private void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
+        private void InitializeComponent()
+        {
+            AvaloniaXamlLoader.Load(this);
+        }
     }
 }

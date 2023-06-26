@@ -6,9 +6,9 @@ namespace FitStatus_Avalonia.ViewModels
 {
     public class BmiViewModel
     {
-        private Bmi_view view;
+        private BmiView view;
 
-        public BmiViewModel(Bmi_view view)
+        public BmiViewModel(BmiView view)
         {
             this.view = view;
         }

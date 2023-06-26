@@ -18,6 +18,9 @@ namespace FitStatus_Avalonia.Views
         public MainWindow()
         {
             InitializeComponent();
+            ContentControl.Content = new MainView();
+            HeaderText.Text = "STRONA GŁÓWNA";
+            Background = (Brush)Resources["MainWindowBrush"]!;
         }
         private void ToggleSplitView(object sender, RoutedEventArgs e)
         {
@@ -31,23 +34,29 @@ namespace FitStatus_Avalonia.Views
             switch (content)
             {
                 case "BMI":
-                    ContentControl.Content = new Bmi_view();
+                    ContentControl.Content = new BmiView();
                     HeaderText.Text = "BMI";
                     Background = (Brush)Resources["BmiBrush"]!;
                     break;
                 case "BMR":
-                    ContentControl.Content = new Bmr_view();
+                    ContentControl.Content = new BmrView();
                     HeaderText.Text = "BMR";
                     Background = (Brush)Resources["BmrBrush"]!;
                     break;
                 case "Trening":
-                    ContentControl.Content = new Training_view();
+                    ContentControl.Content = new TrainingView();
                     HeaderText.Text = "TRENING";
                     break;
             }
 
 
             MySplitView.IsPaneOpen = false;
+        }
+        private void MainViewSvg(object sender, RoutedEventArgs e)
+        {
+            ContentControl.Content = new MainView();
+            HeaderText.Text = "STRONA GŁÓWNA";
+            Background = (Brush)Resources["MainWindowBrush"]!;
         }
     }
 }

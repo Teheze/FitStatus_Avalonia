@@ -7,11 +7,11 @@ using FitStatus_Avalonia.ViewModels;
 
 namespace FitStatus_Avalonia.Views
 {
-    public partial class Bmr_view : UserControl
+    public partial class BmrView : UserControl
     {
         private BmrViewModel viewModel;
 
-        public Bmr_view()
+        public BmrView()
         {
             InitializeComponent();
             viewModel = new BmrViewModel(this);

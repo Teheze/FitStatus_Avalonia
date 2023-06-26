@@ -7,11 +7,11 @@ using FitStatus_Avalonia.ViewModels;
 
 namespace FitStatus_Avalonia.Views
 {
-    public partial class Bmi_view : UserControl
+    public partial class BmiView : UserControl
     {
         private BmiViewModel viewModel;
 
-        public Bmi_view()
+        public BmiView()
         {
             InitializeComponent();
             viewModel = new BmiViewModel(this);
