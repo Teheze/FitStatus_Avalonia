@@ -14,7 +14,7 @@
     <Window.Resources>
         <ImageBrush x:Key="BmiBrush" Stretch="UniformToFill" Source="/Assets/Images/BMI_background.jpg"/>
         <ImageBrush x:Key="BmrBrush" Stretch="UniformToFill" Source="/Assets/Images/BMR_background.jpg"/>
-        <ImageBrush x:Key="TrainingBrush" Stretch="UniformToFill" Source="/Assets/Images/BMI_background.jpg"/>
+        <ImageBrush x:Key="TrainingBrush" Stretch="UniformToFill" Source="/Assets/Images/Training_background.jpg"/>
         <ImageBrush x:Key="MainWindowBrush" Stretch="UniformToFill" Source="/Assets/Images/MainWindow_background.jpg"/>
     </Window.Resources>
     

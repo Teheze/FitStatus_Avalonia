@@ -46,6 +46,7 @@ namespace FitStatus_Avalonia.Views
                 case "Trening":
                     ContentControl.Content = new TrainingView();
                     HeaderText.Text = "TRENING";
+                    Background = (Brush)Resources["TrainingBrush"]!;
                     break;
             }
 

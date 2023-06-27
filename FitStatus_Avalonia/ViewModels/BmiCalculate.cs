@@ -60,7 +60,7 @@ namespace FitStatus_Avalonia.ViewModels
                 if (BmiResultTextBlock != null)
                 {
                     BmiResultTextBlock.Text = "Niepoprawne wartości";
-                    BmiResultTextBlock.Foreground = Avalonia.Media.Brushes.Black;
+                    BmiResultTextBlock.Foreground = Avalonia.Media.Brushes.White;
                 }
             }
         }

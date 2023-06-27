@@ -1,9 +1,12 @@
 ﻿using System;
 
-public class Training
+namespace FitStatus_Avalonia.Models
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public DateTime? StartTime { get; set; }
-    public DateTime? EndTime { get; set; }
+    public class Training
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public DateTime? StartTime { get; set; }
+        public DateTime? EndTime { get; set; }
+    }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using Dapper;
 using FitStatus_Avalonia.ViewModels;
 
-namespace FitStatus_Avalonia
+namespace FitStatus_Avalonia.Models
 {
     public static class DataAccess
     {
@@ -24,7 +24,9 @@ namespace FitStatus_Avalonia
         {
             using (IDbConnection cnn = new SQLiteConnection(_connectionString))
             {
-                cnn.Execute("INSERT INTO Training (Name) VALUES (@Name)", training);
+                var sql = "INSERT INTO Training (Name) VALUES (@Name); SELECT last_insert_rowid();";
+                var trainingId = cnn.ExecuteScalar<int>(sql, training);
+                training.Id = trainingId; 
             }
         }
 

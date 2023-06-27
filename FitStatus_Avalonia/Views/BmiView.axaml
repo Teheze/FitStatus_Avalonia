@@ -26,12 +26,12 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
-                <Label Grid.Column="0" Grid.Row="0" Classes="h3" Content="Waga [kg]" HorizontalAlignment="Left" Margin="10, 30"
-                       VerticalAlignment="Top" Padding="70 9 0 0"/>
+                <TextBlock Grid.Column="0" Grid.Row="0" Classes="h3" Text="Waga [kg]" HorizontalAlignment="Left" Margin="10, 30"
+                       VerticalAlignment="Center" Padding="70 0 0 0"/>
                 <TextBox Grid.Row="0" x:Name="WeightTextBox" Grid.Column="1" Margin="10, 30" VerticalAlignment="Top" />
 
-                <Label Grid.Column="0" Classes="h3" Content="Wzrost [cm]" HorizontalAlignment="Left" Margin="10, 30"
-                       VerticalAlignment="Bottom" Grid.Row="1" Padding="70 9 0 0"/>
+                <TextBlock Grid.Column="0" Classes="h3" Text="Wzrost [cm]" HorizontalAlignment="Left" Margin="10, 30"
+                       VerticalAlignment="Center" Grid.Row="1" Padding="70 0 0 0"/>
                 <TextBox x:Name="HeightTextBox" Grid.Column="1" Margin="10, 30" VerticalAlignment="Bottom"
                          Grid.Row="1" />
             </Grid>

@@ -6,69 +6,86 @@
              x:Class="FitStatus_Avalonia.Views.TrainingView"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
-    
+
     <UserControl.DataContext>
-        <viewModels:TrainingViewModel/>
+        <viewModels:TrainingViewModel />
     </UserControl.DataContext>
     <UserControl.Styles>
         <StyleInclude Source="/Views/Styles.axaml" />
     </UserControl.Styles>
-    
-    <Grid Margin="50">
+
+    <Grid Margin="50 30" HorizontalAlignment="Center">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
         <!-- Treningi -->
-        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
-            <TextBlock Text="Nazwa Treningu:" VerticalAlignment="Center" Margin="5"/>
-            <TextBox x:Name="TrainingName" Text="{Binding TrainingName}" Width="150" Margin="5"/>
-            <Button Command="{Binding AddTrainingCommand}" Content="Dodaj Trening" Margin="5"/>
-            <Button Command="{Binding RemoveTrainingCommand}" Content="Usuń Trening" Margin="5"/>
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Margin="20 0" HorizontalAlignment="Left">
+            <TextBlock Classes="h3" Text="Nazwa Treningu:" VerticalAlignment="Center" Margin="5" />
+        </StackPanel> 
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Margin="20 0" HorizontalAlignment="Left">
+            <TextBox x:Name="TrainingName" Text="{Binding TrainingName}" Width="150" Margin="5" />
         </StackPanel>
-        
-        <ListBox x:Name="TrainingsListBox" Grid.Column="0" Grid.Row="1" Items="{Binding Trainings}" SelectedItem="{Binding SelectedTraining}">
+
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" Margin="20 0 20 20" HorizontalAlignment="Left">
+            <Button Classes="main" Command="{Binding AddTrainingCommand}" Content="Dodaj Trening" Margin="5" />
+            <Button Classes="main" Command="{Binding RemoveTrainingCommand}" Content="Usuń Trening" Margin="5" />
+        </StackPanel>
+
+        <ListBox x:Name="TrainingsListBox" Grid.Column="0" Grid.Row="3" Items="{Binding Trainings}"
+                 CornerRadius="25 0 0 25" SelectedItem="{Binding SelectedTraining}">
+            <ListBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.6" />
+            </ListBox.Background>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Name}" Margin="5"/>
+                    <TextBlock Text="{Binding Name}" Margin="5" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
         <!-- Ćwiczenia -->
-        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
-            <TextBlock Text="Exercise Name:" VerticalAlignment="Center" Margin="5"/>
-            <TextBox x:Name="ExerciseName" Text="{Binding ExerciseName}" Width="150" Margin="5"/>
-            <TextBlock Text="Repetitions:" VerticalAlignment="Center" Margin="5"/>
-            <TextBox x:Name="Repetitions" Text="{Binding Repetitions}" Width="50" Margin="5"/>
-            <TextBlock Text="Sets:" VerticalAlignment="Center" Margin="5"/>
-            <TextBox x:Name="Sets" Text="{Binding Sets}" Width="50" Margin="5"/>
-            <Button Command="{Binding AddExerciseCommand}" Content="Dodaj Ćwiczenie" Margin="5"/>
-            <Button Command="{Binding RemoveExerciseCommand}" Content="Usuń Ćwiczenie" Margin="5"/>
-            <Button Command="{Binding UpdateExerciseCommand}" Content="Zaaktualizuj Ćwiczenie"/>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" Margin="20 0" HorizontalAlignment="Left">
+            <TextBlock Classes="h3" MinWidth="200" Text="Exercise Name:" VerticalAlignment="Center" Margin="5" />
+            <TextBlock Classes="h3" MinWidth="200" Text="Repetitions:" VerticalAlignment="Center" Margin="5" />
+            <TextBlock Classes="h3" MinWidth="200" Text="Sets:" VerticalAlignment="Center" Margin="5" />
         </StackPanel>
-        
-        <ListBox x:Name="ExercisesListBox" Grid.Column="1" Grid.Row="1" Items="{Binding Exercises}" SelectedItem="{Binding SelectedExercise}">
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Margin="20 0" HorizontalAlignment="Left">
+            <TextBox x:Name="ExerciseName" Text="{Binding ExerciseName}" Width="150" Margin="5" />
+            <TextBox x:Name="Repetitions" Text="{Binding Repetitions}" Width="50" Margin="5" />
+            <TextBox x:Name="Sets" Text="{Binding Sets}" Width="50" Margin="5" />
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" Margin="20 0 20 20" HorizontalAlignment="Left">
+            <Button Classes="main" Command="{Binding AddExerciseCommand}" Content="Dodaj Ćwiczenie" Margin="5" />
+            <Button Classes="main" Command="{Binding RemoveExerciseCommand}" Content="Usuń Ćwiczenie" Margin="5" />
+            <Button Classes="main" Command="{Binding UpdateExerciseCommand}" Content="Zaaktualizuj Ćwiczenie"
+                    Margin="5" />
+        </StackPanel>
+
+        <ListBox x:Name="ExercisesListBox" Grid.Column="1" Grid.Row="3" Items="{Binding Exercises}"
+                 CornerRadius="0 25 25 0" SelectedItem="{Binding SelectedExercise}">
+            <ListBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.4" />
+            </ListBox.Background>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}" Margin="5"/>
-                        <TextBlock Text="Ilość powtórzeń: " Margin="5"/>
-                        <TextBlock Text="{Binding Repetitions}" Margin="5"/>
-                        <TextBlock Text="Ilość serii: " Margin="5"/>
-                        <TextBlock Text="{Binding Sets}" Margin="5"/>
+                        <TextBlock Text="{Binding Name}" Margin="5" />
+                        <TextBlock Text="Ilość powtórzeń: " Margin="5" />
+                        <TextBlock Text="{Binding Repetitions}" Margin="5" />
+                        <TextBlock Text="Ilość serii: " Margin="5" />
+                        <TextBlock Text="{Binding Sets}" Margin="5" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-
-        
     </Grid>
 </UserControl>

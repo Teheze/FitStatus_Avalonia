@@ -38,21 +38,6 @@ C:\Users\Tehez\.nuget\packages\microsoft.codeanalysis.csharp.scripting\3.4.0\lib
 C:\Users\Tehez\.nuget\packages\microsoft.codeanalysis.common\3.4.0\lib\netstandard2.0\Microsoft.CodeAnalysis.dll
 C:\Users\Tehez\.nuget\packages\microsoft.codeanalysis.scripting.common\3.4.0\lib\netstandard2.0\Microsoft.CodeAnalysis.Scripting.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\Microsoft.CSharp.dll
-C:\Users\Tehez\.nuget\packages\microsoft.data.sqlite.core\8.0.0-preview.5.23280.1\lib\net6.0\Microsoft.Data.Sqlite.dll
-C:\Users\Tehez\.nuget\packages\microsoft.entityframeworkcore.abstractions\8.0.0-preview.5.23280.1\lib\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Tehez\.nuget\packages\microsoft.entityframeworkcore\8.0.0-preview.5.23280.1\lib\net6.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Tehez\.nuget\packages\microsoft.entityframeworkcore.relational\8.0.0-preview.5.23280.1\lib\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Tehez\.nuget\packages\microsoft.entityframeworkcore.sqlite.core\8.0.0-preview.5.23280.1\lib\net6.0\Microsoft.EntityFrameworkCore.Sqlite.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.caching.abstractions\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.caching.memory\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.configuration.abstractions\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.dependencyinjection\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.dependencymodel\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.logging\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.Logging.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.options\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\Tehez\.nuget\packages\microsoft.extensions.primitives\8.0.0-preview.5.23280.8\lib\net7.0\Microsoft.Extensions.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\Microsoft.VisualBasic.Core.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\Microsoft.VisualBasic.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\Microsoft.Win32.Primitives.dll
@@ -64,11 +49,10 @@ C:\Users\Tehez\.nuget\packages\shimskiasharp\0.5.18\lib\net6.0\ShimSkiaSharp.dll
 C:\Users\Tehez\.nuget\packages\skiasharp\2.88.1-preview.108\lib\net6.0\SkiaSharp.dll
 C:\Users\Tehez\.nuget\packages\splat\10.0.1\lib\net5.0\Splat.dll
 C:\Users\Tehez\.nuget\packages\sqlite-net-pcl\1.8.116\lib\netstandard2.0\SQLite-net.dll
-C:\Users\Tehez\.nuget\packages\sqlitepclraw.bundle_e_sqlite3\2.1.4\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll
-C:\Users\Tehez\.nuget\packages\sqlitepclraw.core\2.1.5\lib\netstandard2.0\SQLitePCLRaw.core.dll
+C:\Users\Tehez\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Tehez\.nuget\packages\sqlitepclraw.core\2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll
 C:\Users\Tehez\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 C:\Users\Tehez\.nuget\packages\sqlitepclraw.provider.dynamic_cdecl\2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll
-C:\Users\Tehez\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.4\lib\net6.0\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\Tehez\.nuget\packages\svg.custom\0.5.18\lib\net6.0\Svg.Custom.dll
 C:\Users\Tehez\.nuget\packages\svg.model\0.5.18\lib\net6.0\Svg.Model.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.AppContext.dll
@@ -201,8 +185,8 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.Text.Encoding.CodePages.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.Text.Encoding.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.Text.Encoding.Extensions.dll
-C:\Users\Tehez\.nuget\packages\system.text.encodings.web\8.0.0-preview.5.23280.8\lib\net7.0\System.Text.Encodings.Web.dll
-C:\Users\Tehez\.nuget\packages\system.text.json\8.0.0-preview.5.23280.8\lib\net7.0\System.Text.Json.dll
+C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.Text.Encodings.Web.dll
+C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.Text.Json.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.Text.RegularExpressions.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.Threading.Channels.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\7.0.2\ref\net7.0\System.Threading.dll

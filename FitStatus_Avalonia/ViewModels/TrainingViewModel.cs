@@ -5,6 +5,7 @@ using Avalonia.Controls;
 using FitStatus_Avalonia.ViewModels;
 using ReactiveUI;
 using System.Linq;
+using FitStatus_Avalonia.Models;
 
 namespace FitStatus_Avalonia.ViewModels
 {
@@ -105,12 +106,11 @@ namespace FitStatus_Avalonia.ViewModels
                 Name = ExerciseName,
                 Repetitions = Repetitions,
                 Sets = Sets,
-                TrainingId = SelectedTraining.Id
+                TrainingId = SelectedTraining.Id 
             };
             DataAccess.AddExerciseToTraining(exercise);
             Exercises.Add(exercise);
         }
-
         private void RemoveTraining()
         {
             if (SelectedTraining == null) return;
@@ -135,8 +135,7 @@ namespace FitStatus_Avalonia.ViewModels
             SelectedExercise.Repetitions = Repetitions;
             SelectedExercise.Sets = Sets;
             DataAccess.UpdateExercise(SelectedExercise);
-    
-            // refresh list after update
+            
             LoadExercisesForTraining();
         }
 
