@@ -10,8 +10,11 @@
     <UserControl.DataContext>
         <viewModels:TrainingViewModel/>
     </UserControl.DataContext>
+    <UserControl.Styles>
+        <StyleInclude Source="/Views/Styles.axaml" />
+    </UserControl.Styles>
     
-    <Grid Margin="10">
+    <Grid Margin="50">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -19,15 +22,15 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <!-- Treningi -->
         <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
-            <TextBlock Text="Training Name:" VerticalAlignment="Center" Margin="5"/>
+            <TextBlock Text="Nazwa Treningu:" VerticalAlignment="Center" Margin="5"/>
             <TextBox x:Name="TrainingName" Text="{Binding TrainingName}" Width="150" Margin="5"/>
-            <Button Command="{Binding AddTrainingCommand}" Content="Add Training" Margin="5"/>
-            <Button Command="{Binding RemoveTrainingCommand}" Content="Remove Training" Margin="5"/>
+            <Button Command="{Binding AddTrainingCommand}" Content="Dodaj Trening" Margin="5"/>
+            <Button Command="{Binding RemoveTrainingCommand}" Content="Usuń Trening" Margin="5"/>
         </StackPanel>
         
         <ListBox x:Name="TrainingsListBox" Grid.Column="0" Grid.Row="1" Items="{Binding Trainings}" SelectedItem="{Binding SelectedTraining}">
@@ -46,8 +49,9 @@
             <TextBox x:Name="Repetitions" Text="{Binding Repetitions}" Width="50" Margin="5"/>
             <TextBlock Text="Sets:" VerticalAlignment="Center" Margin="5"/>
             <TextBox x:Name="Sets" Text="{Binding Sets}" Width="50" Margin="5"/>
-            <Button Command="{Binding AddExerciseCommand}" Content="Add Exercise" Margin="5"/>
-            <Button Command="{Binding RemoveExerciseCommand}" Content="Remove Exercise" Margin="5"/>
+            <Button Command="{Binding AddExerciseCommand}" Content="Dodaj Ćwiczenie" Margin="5"/>
+            <Button Command="{Binding RemoveExerciseCommand}" Content="Usuń Ćwiczenie" Margin="5"/>
+            <Button Command="{Binding UpdateExerciseCommand}" Content="Zaaktualizuj Ćwiczenie"/>
         </StackPanel>
         
         <ListBox x:Name="ExercisesListBox" Grid.Column="1" Grid.Row="1" Items="{Binding Exercises}" SelectedItem="{Binding SelectedExercise}">
@@ -55,17 +59,16 @@
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Name}" Margin="5"/>
-                        <TextBlock Text="Repetitions: " Margin="5"/>
+                        <TextBlock Text="Ilość powtórzeń: " Margin="5"/>
                         <TextBlock Text="{Binding Repetitions}" Margin="5"/>
-                        <TextBlock Text="Sets: " Margin="5"/>
+                        <TextBlock Text="Ilość serii: " Margin="5"/>
                         <TextBlock Text="{Binding Sets}" Margin="5"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <!-- Przycisk do aktualizacji ćwiczenia -->
-        <Button Grid.Column="1" Grid.Row="2" Command="{Binding UpdateExerciseCommand}" Content="Update Exercise"/>
+
         
     </Grid>
 </UserControl>

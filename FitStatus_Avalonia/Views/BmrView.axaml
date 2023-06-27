@@ -82,7 +82,7 @@
         <!-- Result bar -->
         <Grid ColumnDefinitions="*, Auto, *" Grid.Row="1">
             <Grid Grid.Column="0"></Grid>
-            <Border Grid.Column="1" BorderThickness="1" BorderBrush="#989AD9" CornerRadius="25">
+            <Border Grid.Column="1" BorderThickness="2" BorderBrush="#989AD9" CornerRadius="25">
                 <Border.Background>
                     <SolidColorBrush Color="#1F1F1F" Opacity="0.6" />
                 </Border.Background>

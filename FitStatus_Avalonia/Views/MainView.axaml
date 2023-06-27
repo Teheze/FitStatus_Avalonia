@@ -10,14 +10,50 @@
     <UserControl.DataContext>
         <viewModels:TrainingViewModel/>
     </UserControl.DataContext>
+    <UserControl.Styles>
+        <StyleInclude Source="/Views/Styles.axaml" />
+    </UserControl.Styles>
     
-    
-    <Grid Margin="10">
-        
+    <Grid Margin="100 50" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <!-- Info about last training -->
-        <TextBlock Text="Last Training:" Margin="5"/>
-        <TextBlock Text="{Binding LastTrainingInfo}" Margin="5"/>
-        <!-- Info about last saved bmr -->
+        <Grid Grid.Column="0">
+            <Border x:Name="LastTrainingResultBorder" BorderThickness="2" BorderBrush="#989AD9" CornerRadius="25" Margin="20 20 20 20">
+            <Border.Background>
+                <SolidColorBrush Color="#1F1F1F" Opacity="0.8" />
+            </Border.Background>
+            <TextBlock x:Name="LastTrainingResultBlock" Classes="result"
+                       Text="W tym miejscu pokaże się twój ostatni trening" HorizontalAlignment="Center"
+                       VerticalAlignment="Center" Padding="30" TextWrapping="Wrap"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
         <!-- Info about last saved bmi -->
+        <Border x:Name="LastBmiResultBorder" Grid.Row="0" BorderThickness="2" BorderBrush="#989AD9" CornerRadius="25" Margin="20 20 20 20">
+            <Border.Background>
+                <SolidColorBrush Color="#1F1F1F" Opacity="0.8" />
+            </Border.Background>
+            <TextBlock x:Name="LastBmiResultTextBlock" Classes="result"
+                       Text="Nie obliczyłeś jeszcze swojego BMI. Skorzystaj z kalkulatora, aby się tutaj wyświetliło" HorizontalAlignment="Center"
+                       VerticalAlignment="Center" Padding="30" TextWrapping="Wrap" />
+        </Border>
+        <!-- Info about last saved bmr -->
+        <Border x:Name="LastBmrResultBorder" Grid.Row="1" BorderThickness="2" BorderBrush="#989AD9" CornerRadius="25" Margin="20 20 20 20">
+            <Border.Background>
+                <SolidColorBrush Color="#1F1F1F" Opacity="0.8" />
+            </Border.Background>
+            <TextBlock x:Name="LastBmrResultTextBlock" Classes="result"
+                       Text="Nie obliczyłeś jeszcze swojego BMR" HorizontalAlignment="Center"
+                       VerticalAlignment="Center" Padding="30" TextWrapping="Wrap" />
+        </Border>
+        </Grid>
     </Grid>
 </UserControl>
