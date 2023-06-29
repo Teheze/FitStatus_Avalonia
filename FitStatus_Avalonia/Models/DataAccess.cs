@@ -3,13 +3,47 @@ using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using Dapper;
-using FitStatus_Avalonia.ViewModels;
 
 namespace FitStatus_Avalonia.Models
 {
     public static class DataAccess
     {
         private static readonly string _connectionString = "Data Source=trainingDB.sqlite;Version=3;";
+
+        static DataAccess()
+        {
+            InitializeDatabase();
+        }
+
+        private static void InitializeDatabase()
+        {
+            if (!DatabaseExists())
+            {
+                CreateDatabase();
+                CreateTables();
+            }
+        }
+
+        private static bool DatabaseExists()
+        {
+            return System.IO.File.Exists("trainingDB.sqlite");
+        }
+
+        private static void CreateDatabase()
+        {
+            SQLiteConnection.CreateFile("trainingDB.sqlite");
+        }
+
+        private static void CreateTables()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(_connectionString))
+            {
+                cnn.Execute("CREATE TABLE Training (Id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, StartTime TEXT, EndTime TEXT)");
+                cnn.Execute("CREATE TABLE Exercise (Id INTEGER PRIMARY KEY AUTOINCREMENT, TrainingId INTEGER, Name TEXT, Repetitions INTEGER, Sets INTEGER)");
+                cnn.Execute("CREATE TABLE Bmi (Id INTEGER PRIMARY KEY AUTOINCREMENT, Info TEXT, Time DATE)");
+                cnn.Execute("CREATE TABLE Bmr (Id INTEGER PRIMARY KEY AUTOINCREMENT, Weight DOUBLE PRECISION, Height DOUBLE PRECISION, Age INTEGER, Gender TEXT, Info TEXT, Time DATE)");
+            }
+        }
 
         public static List<Training> LoadTrainings()
         {
@@ -26,7 +60,7 @@ namespace FitStatus_Avalonia.Models
             {
                 var sql = "INSERT INTO Training (Name) VALUES (@Name); SELECT last_insert_rowid();";
                 var trainingId = cnn.ExecuteScalar<int>(sql, training);
-                training.Id = trainingId; 
+                training.Id = trainingId; // Przypisanie wygenerowanego Id do obiektu Training
             }
         }
 
@@ -69,6 +103,56 @@ namespace FitStatus_Avalonia.Models
             using (IDbConnection cnn = new SQLiteConnection(_connectionString))
             {
                 cnn.Execute("UPDATE Exercise SET Name = @Name, Repetitions = @Repetitions, Sets = @Sets WHERE Id = @Id", exercise);
+            }
+        }
+
+        public static Training GetLastTraining()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(_connectionString))
+            {
+                var output = cnn.QueryFirstOrDefault<Training>("SELECT * FROM Training ORDER BY EndTime DESC LIMIT 1");
+                return output;
+            }
+        }
+
+        public static void UpdateTraining(Training training)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(_connectionString))
+            {
+                cnn.Execute("UPDATE Training SET Name = @Name, StartTime = @StartTime, EndTime = @EndTime WHERE Id = @Id", training);
+            }
+        }
+        
+        public static void AddBmiRecord(Bmi bmi)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(_connectionString))
+            {
+                cnn.Execute("INSERT INTO Bmi (Info, Time) VALUES (@Info, @Time)", bmi);
+            }
+        }
+
+        public static Bmi GetLastBmi()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(_connectionString))
+            {
+                var result = cnn.QueryFirstOrDefault<Bmi>("SELECT * FROM Bmi ORDER BY Time DESC LIMIT 1");
+                return result;
+            }
+        }
+
+        public static void AddBmrRecord(Bmr bmr)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(_connectionString))
+            {
+                cnn.Execute("INSERT INTO Bmr (Weight, Height, Age, Gender, Info, Time) VALUES (@Weight, @Height, @Age, @Gender, @Info, @Time)", bmr);
+            }
+        }
+        public static Bmr GetLastBmr()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(_connectionString))
+            {
+                var result = cnn.QueryFirstOrDefault<Bmr>("SELECT * FROM Bmr ORDER BY Time DESC LIMIT 1");
+                return result;
             }
         }
     }

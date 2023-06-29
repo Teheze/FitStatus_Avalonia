@@ -19,7 +19,9 @@ namespace FitStatus_Avalonia.ViewModels
         private int _sets;
         private Training? _selectedTraining;
         private Exercise? _selectedExercise;
-
+        public ReactiveCommand<Unit, Unit> StartTrainingCommand { get; }
+        public ReactiveCommand<Unit, Unit> EndTrainingCommand { get; }
+        
         public TrainingViewModel()
         {
             _trainings = new ObservableCollection<Training>(DataAccess.LoadTrainings());
@@ -30,6 +32,8 @@ namespace FitStatus_Avalonia.ViewModels
             RemoveTrainingCommand = ReactiveCommand.Create(RemoveTraining);
             RemoveExerciseCommand = ReactiveCommand.Create(RemoveExercise);
             UpdateExerciseCommand = ReactiveCommand.Create(UpdateExercise);
+            StartTrainingCommand = ReactiveCommand.Create(StartTraining);
+            EndTrainingCommand = ReactiveCommand.Create(EndTraining);
         }
 
         public ObservableCollection<Training> Trainings
@@ -149,6 +153,21 @@ namespace FitStatus_Avalonia.ViewModels
             {
                 Exercises.Add(exercise);
             }
+        }
+        private void StartTraining()
+        {
+            if (SelectedTraining == null) return;
+
+            SelectedTraining.StartTime = DateTime.Now;
+            DataAccess.UpdateTraining(SelectedTraining);
+        }
+
+        private void EndTraining()
+        {
+            if (SelectedTraining == null) return;
+
+            SelectedTraining.EndTime = DateTime.Now;
+            DataAccess.UpdateTraining(SelectedTraining);
         }
     }
 }

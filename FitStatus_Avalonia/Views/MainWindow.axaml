@@ -18,7 +18,6 @@
         <ImageBrush x:Key="MainWindowBrush" Stretch="UniformToFill" Source="/Assets/Images/MainWindow_background.jpg"/>
     </Window.Resources>
     
-    
     <Window.Styles>
         <StyleInclude Source="/Views/Styles.axaml" />
         <Style Selector="Window">
@@ -40,8 +39,8 @@
             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock  x:Name="HeaderText" Classes="h1" Text="STRONA GŁÓWNA"/>
             </StackPanel>
-            <Button Classes="svg" Grid.Column="2" Width="110" Height="110" Margin="0 0 10 0" Click="MainViewSvg">
-                <Image Source="{SvgImage /Assets/Images/account.svg}"/>
+            <Button Classes="svg" Grid.Column="2" Width="120" Height="120" Margin="0 0 10 0" Click="MainViewSvg">
+                <Image Source="{SvgImage /Assets/Images/home.svg}"/>
             </Button>
         </Grid>
         <!-- Main bar -->

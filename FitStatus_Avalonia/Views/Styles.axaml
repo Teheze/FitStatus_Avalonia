@@ -31,6 +31,14 @@
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="#D9D9D9"/>
     </Style>
+    
+    <Style Selector="TextBlock.header">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+    </Style>
 
     <!-- Button styling -->
     <Style Selector="Button.main">
@@ -125,5 +133,10 @@
         <Setter Property="TextBlock.Foreground" Value="#D9D9D9" />
         <Setter Property="Background" Value="#989AD9" />
         <Setter Property="Padding" Value="0 0" />
+    </Style>
+    
+    <Style Selector="ListBoxItem:pressed">
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Foreground" Value="White"/>
     </Style>
 </Styles>

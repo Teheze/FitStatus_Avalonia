@@ -7,10 +7,12 @@ namespace FitStatus_Avalonia.Views
 {
     public partial class MainView : UserControl
     {
+        private MainViewModel viewModel;
+
         public MainView()
         {
             InitializeComponent();
-            DataContext = new TrainingViewModel();
+            viewModel = new MainViewModel(this);
         }
 
         private void InitializeComponent()

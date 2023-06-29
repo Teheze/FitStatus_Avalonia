@@ -33,7 +33,6 @@
 
     <ItemGroup>
       <Compile Remove="ViewModels\MyViewModel.cs" />
-      <Compile Remove="ViewModels\BmiViewModel.cs" />
       <Compile Update="Views\MainView.axaml.cs">
         <DependentUpon>MainView.axaml</DependentUpon>
       </Compile>
