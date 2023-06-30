@@ -60,7 +60,7 @@ namespace FitStatus_Avalonia.Models
             {
                 var sql = "INSERT INTO Training (Name) VALUES (@Name); SELECT last_insert_rowid();";
                 var trainingId = cnn.ExecuteScalar<int>(sql, training);
-                training.Id = trainingId; // Przypisanie wygenerowanego Id do obiektu Training
+                training.Id = trainingId;
             }
         }
 

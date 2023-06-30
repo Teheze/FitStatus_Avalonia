@@ -1,14 +1,6 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Data;
-using Avalonia.Layout;
-using Avalonia.Data.Core;
-using Avalonia.Markup.Xaml;
 using Avalonia.Media;
-using Avalonia.Reactive;
-using FitStatus_Avalonia.ViewModels;
-using ReactiveUI;
 
 
 namespace FitStatus_Avalonia.Views

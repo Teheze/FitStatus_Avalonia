@@ -1,7 +1,6 @@
 ﻿using FitStatus_Avalonia.Models;
 using Avalonia.Controls;
 using ReactiveUI;
-using System;
 using FitStatus_Avalonia.Views;
 
 namespace FitStatus_Avalonia.ViewModels
@@ -45,12 +44,12 @@ namespace FitStatus_Avalonia.ViewModels
             TextBlock lastBmrResultTextBlock = _view.FindControl<TextBlock>("LastBmrResultTextBlock");
             var lastBmr = DataAccess.GetLastBmr();
             string age = "lat";
-            if (lastBmr.Age % 10 == 2 || lastBmr.Age % 10 == 3 || lastBmr.Age % 10 == 4 || lastBmr.Age == 2 || lastBmr.Age == 3 || lastBmr.Age == 4)
-            {
-                age += "a";
-            }
             if (lastBmr != null)
             {
+                if (lastBmr.Age % 10 == 2 || lastBmr.Age % 10 == 3 || lastBmr.Age % 10 == 4 || lastBmr.Age == 2 || lastBmr.Age == 3 || lastBmr.Age == 4)
+                {
+                    age += "a";
+                }
                 lastBmrResultTextBlock.Text = $"{lastBmr.Gender} {lastBmr.Age} {age} o wzroście {lastBmr.Height} cm i wadze {lastBmr.Weight} kg. \n\n{lastBmr.Info}";
             }
             else

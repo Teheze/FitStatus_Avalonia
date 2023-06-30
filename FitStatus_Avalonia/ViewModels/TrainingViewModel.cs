@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Reactive;
-using Avalonia.Controls;
-using FitStatus_Avalonia.ViewModels;
 using ReactiveUI;
-using System.Linq;
 using FitStatus_Avalonia.Models;
 
 namespace FitStatus_Avalonia.ViewModels
