@@ -1,5 +1,7 @@
-﻿using FitStatus_Avalonia.Models;
+﻿using System;
+using FitStatus_Avalonia.Models;
 using Avalonia.Controls;
+using ExCSS;
 using ReactiveUI;
 using FitStatus_Avalonia.Views;
 
@@ -29,7 +31,7 @@ namespace FitStatus_Avalonia.ViewModels
         {
             TextBlock lastBmiResultTextBlock = _view.FindControl<TextBlock>("LastBmiResultTextBlock");
             var lastBmi = DataAccess.GetLastBmi();
-        
+
             if (lastBmi != null)
             {
                 lastBmiResultTextBlock.Text = lastBmi.Info;
@@ -39,6 +41,7 @@ namespace FitStatus_Avalonia.ViewModels
                 lastBmiResultTextBlock.Text = "Oblicz swoje BMI korzystając z kalkulatora";
             }
         }
+
         private void GetLastBmr()
         {
             TextBlock lastBmrResultTextBlock = _view.FindControl<TextBlock>("LastBmrResultTextBlock");
@@ -46,17 +49,21 @@ namespace FitStatus_Avalonia.ViewModels
             string age = "lat";
             if (lastBmr != null)
             {
-                if (lastBmr.Age % 10 == 2 || lastBmr.Age % 10 == 3 || lastBmr.Age % 10 == 4 || lastBmr.Age == 2 || lastBmr.Age == 3 || lastBmr.Age == 4)
+                if (lastBmr.Age % 10 == 2 || lastBmr.Age % 10 == 3 || lastBmr.Age % 10 == 4 || lastBmr.Age == 2 ||
+                    lastBmr.Age == 3 || lastBmr.Age == 4)
                 {
                     age += "a";
                 }
-                lastBmrResultTextBlock.Text = $"{lastBmr.Gender} {lastBmr.Age} {age} o wzroście {lastBmr.Height} cm i wadze {lastBmr.Weight} kg. \n\n{lastBmr.Info}";
+
+                lastBmrResultTextBlock.Text =
+                    $"{lastBmr.Gender} {lastBmr.Age} {age} o wzroście {lastBmr.Height} cm i wadze {lastBmr.Weight} kg. \n\n{lastBmr.Info}";
             }
             else
             {
                 lastBmrResultTextBlock.Text = "Oblicz swoje BMR korzystając z kalkulatora.";
             }
         }
+
         private void LoadLastTrainingInfo()
         {
             TextBlock lastTrainingTextBlock = _view.FindControl<TextBlock>("LastTrainingTextBlock");
@@ -64,29 +71,37 @@ namespace FitStatus_Avalonia.ViewModels
 
             if (lastTraining != null)
             {
-                var trainingDuration = lastTraining.EndTime - lastTraining.StartTime;
-
-                var exercises = DataAccess.GetExercisesForTraining(lastTraining.Id);
-
-                lastTrainingTextBlock.Text = $"{lastTraining.Name}\n\n" +
-                                             $"Czas rozpoczęcia: {lastTraining.StartTime}\n" +
-                                             $"Czas zakończenia: {lastTraining.EndTime}\n" +
-                                             $"Czas trwania: {trainingDuration}\n\n\n\n";
-                lastTrainingTextBlock.Text +=   $"Nazwa," +
-                                                $" Ilość powtórzeń, " +
-                                                $" Ilość serii \n";
-                foreach (var exercise in exercises)
+                Nullable<TimeSpan> trainingDurationNullable = lastTraining.EndTime - lastTraining.StartTime;
+                if (trainingDurationNullable.HasValue)
                 {
-                    lastTrainingTextBlock.Text += $"- {exercise.Name}," +
-                                                  $" {exercise.Repetitions}," +
-                                                  $" {exercise.Sets}\n";
+                    TimeSpan trainingDuration = trainingDurationNullable.Value;
+
+                    // hour:minute:second
+                    string formattedDuration =
+                        $"{trainingDuration.Hours:D2}:{trainingDuration.Minutes:D2}:{trainingDuration.Seconds:D2}";
+
+                    var exercises = DataAccess.GetExercisesForTraining(lastTraining.Id);
+
+                    lastTrainingTextBlock.Text = $"{lastTraining.Name}\n\n" +
+                                                 $"Czas rozpoczęcia: {lastTraining.StartTime}\n" +
+                                                 $"Czas zakończenia: {lastTraining.EndTime}\n" +
+                                                 $"Czas trwania: {formattedDuration}\n\n\n\n";
+                    lastTrainingTextBlock.Text += $"Nazwa," +
+                                                  $" Ilość powtórzeń, " +
+                                                  $" Ilość serii \n";
+                    foreach (var exercise in exercises)
+                    {
+                        lastTrainingTextBlock.Text += $"- {exercise.Name}," +
+                                                      $" {exercise.Repetitions}," +
+                                                      $" {exercise.Sets}\n";
+                    }
                 }
             }
             else
             {
-                lastTrainingTextBlock.Text = "Brak wykonanego treningu.\nMusisz zakończyć trening, aby się on tutaj wyświetlił.";
+                lastTrainingTextBlock.Text =
+                    "Brak wykonanego treningu.\nMusisz zakończyć trening, aby się on tutaj wyświetlił.";
             }
         }
-
     }
 }
